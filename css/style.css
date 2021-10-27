@@ -30,6 +30,6 @@ body{
     color: #8b8a8a;
 }
 
-.buttonsCrud{
-    width: 33%;
+#buttonsCrud{
+    padding-right: 5px;
 }

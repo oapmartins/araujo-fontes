@@ -2,7 +2,7 @@
 <html lang="pt-bt">
 
 <head>
-  <title>teste</title>
+  <title>Araujo Fontes</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +15,7 @@
 <body>
 
   <div class="row linha-logo">
-      <img src="./img/logo.png" alt="" class="logo">
+    <img src="./img/logo.png" alt="" class="logo">
   </div>
   <nav class='nav-principal'>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -33,51 +33,38 @@
 
       <form class="formularioCrud">
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+
+          <div class="form-group col-md-3">
+            <label for="idPatrimonio">ID</label>
+            <input type="number" class="form-control" id="idPatrimonio" placeholder="">
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Senha</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+
+          <div class="form-group col-md-3">
+            <label for="dataPatrimonio">Data</label>
+            <input type="date" class="form-control" id="dataPatrimonio">
           </div>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Endereço</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress2">Endereço 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">Cidade</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputEstado">Estado</label>
-            <select id="inputEstado" class="form-control">
-              <option selected>Escolher...</option>
-              <option>...</option>
+
+          <div class="form-group col-md-3">
+            <label for="idFundo">Fundo</label>
+            <select id="idFundo" class="form-control">
+              <option selected>Escolher o fundo...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">3</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
-            <label for="inputCEP">CEP</label>
-            <input type="text" class="form-control" id="inputCEP">
+
+          <div class="form-group col-md-3">
+            <label for="idPatrimonio">Valor</label>
+            <input type="number" class="form-control" id="idPatrimonio" placeholder="Valor do Patrimônio">
           </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Clique em mim
-            </label>
+
+          <div id="buttonsCrud">
+            <button type="button" class="btn btn-primary buttonsCrud" id="btnCadastrar">Cadastrar</button>
+            <button type="button" class="btn btn-primary buttonsCrud" id="btnExcluir">Excluir</button>
+            <button type="button" class="btn btn-primary buttonsCrud" id="btnlimpar">Limpa</button>
           </div>
-        </div>
-        <button type="button" class="btn btn-primary buttonsCrud" id="btnCadastrar">Cadastrar</button>
-        <button type="button" class="btn btn-primary buttonsCrud" id="btnExcluir">Excluir</button>
-        <button type="button" class="btn btn-primary buttonsCrud" id="btnlimpar">Limpa</button>
       </form>
     </div>
   </div>
