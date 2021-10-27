@@ -1,0 +1,35 @@
+.nav-principal {
+    padding: 20px 171px 0;
+}
+
+.tab-content {
+    margin: 0 170px 150px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background:#f7f7f7;
+}
+
+.linha-logo{
+    justify-content: center;
+}
+
+.tab-pane{
+    padding: 20px;
+    border: 2px solid #e7eaec;
+    border-top: none;
+    border-radius: 12px;
+    background: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.nav-tabs a{
+    color: #8b8a8a;
+}
+
+.buttonsCrud{
+    width: 33%;
+}
