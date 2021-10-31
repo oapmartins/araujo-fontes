@@ -144,19 +144,21 @@ class Database
      * @param string $where
      * @param string $order
      * @param string limit
+     * @param string fields
+     * @param string groupBy
      * @return PDOStatement
      */
-    public function select($where = null, $order = null, $limit = null, $fields = '*')
+    public function select($where = null, $order = null, $limit = null, $fields = '*', $groupBy = null)
     {
 
         // Dados da Query
-        $where = strlen($where) ? 'WHERE ' . $where : '';
-        $order = strlen($order) ? 'ORDER BY ' . $order : '';
-        $limit = strlen($limit) ? 'LIMIT ' . $limit : '';
+        $where = strlen($where)     ? 'WHERE '      . $where    : '';
+        $order = strlen($order)     ? 'ORDER BY '   . $order    : '';
+        $limit = strlen($limit)     ? 'LIMIT '      . $limit    : '';
+        $groupBy = strlen($groupBy) ? 'GROUP BY '   . $groupBy  : '';
 
         // Monta a Query
-        $query = "SELECT " . $fields . " FROM " . $this->table . " " . $where . " " . $order . " " . $limit;
-
+        $query = "SELECT " . $fields . " FROM " . $this->table . " " . $where . " " . $groupBy . " " . $order . " " . $limit;
         return $this->execute($query);
     }
 }

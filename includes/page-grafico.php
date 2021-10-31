@@ -21,6 +21,7 @@
             <div class="form-group col-md-3">
                 <button type="button" class="btn btn-primary btn-pesquisa" id="btnPesquisar"><i class="fas fa-search"></i> Buscar</button>
             </div>
+
         </div>
     </section>
 

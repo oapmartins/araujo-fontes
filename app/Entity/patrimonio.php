@@ -97,8 +97,8 @@ class Patrimonio{
      * @param string limit
      * @return array
      */
-    public static function getPatrimonios($where = null, $order = null, $limit = null){
-        return (new Database('patrimonios'))->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
+    public static function getPatrimonios($where = null, $order = null, $limit = null, $fields = '*', $groupBy = null){
+        return (new Database('patrimonios'))->select($where, $order, $limit, $fields, $groupBy)->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 
         /**
