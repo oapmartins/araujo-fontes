@@ -5,7 +5,7 @@
     </section>
 
     <h3 class="mt-3">Excluir Patrimônio</h3>
-    <form method="post" class="painel-fundo">
+    <form method="post" class="card">
 
         <div class="row">
 
@@ -20,7 +20,7 @@
                 <a href="index.php">
                     <button type="button" class="btn btn-success">Cancelar</button>
                 </a>
-                <button type="submit" name="excluir" class="btn btn-danger">Excluir</button>
+                <button type="submit" name="excluir" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Excluir</button>
             </div>
         </div>
     </form>

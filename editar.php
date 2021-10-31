@@ -3,6 +3,7 @@
 require __DIR__.'/vendor/autoload.php';
 
 define('TITLE', 'Editar Patrimônio');
+define('TITLEBTN', 'Editar');
 
 use \App\Entity\Patrimonio;
 

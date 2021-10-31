@@ -4,11 +4,11 @@ $mensagem = '';
 if(isset($_GET['status'])){
   switch ($_GET['status']) {
     case 'success':
-      $mensagem = '<div class="alert alert-success">Ação executada com sucesso!</div>';
+      $mensagem = 'Ação executada com sucesso!';
       break;
 
     case 'error':
-      $mensagem = '<div class="alert alert-danger">Ação não executada!</div>';
+      $mensagem = 'Ação não executada!';
       break;
   }
 }
@@ -31,12 +31,12 @@ foreach($patrimonios as $patrimonio){
         <td>' . $dataAtualizacao .'</td>
         <td>
             <a href="editar.php?id='.$patrimonio->id.'">
-                <button type="button" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-primary btn-lista"><i class="fas fa-edit"></i> Editar</button>
             </a>
         </td>
         <td>
             <a href="excluir.php?id='.$patrimonio->id.'">
-                <button type="button" class="btn btn-danger">Excluir</button>
+                <button type="button" class="btn btn-danger btn-lista"><i class="fas fa-trash-alt"></i> Excluir</button>
             </a>
         </td>
 
@@ -47,20 +47,28 @@ foreach($patrimonios as $patrimonio){
 
 <main>
 
-    <?=$mensagem?>
-
+    <input type="hidden" id="msgRetorno" value="<?=$mensagem?>">
     <section>
-    <a href="cadastrar.php">
-        <button class="btn btn-success">Gráfico</button>
-    </a>
 
-    <a href="cadastrar.php">
-        <button class="btn btn-success">Novo Patrimônio</button>
-    </a>
+    <div class="row">
+        <div class="form-group">
+            <a href="grafico.php">
+                <button class="btn btn-success button-menu"> <i class="fas fa-chart-bar"></i> Gráfico</button>
+            </a>
+        </div>
+
+        <div class="form-group mt-3">
+            <a href="cadastrar.php">
+                <button class="btn btn-success button-menu"><i class="fas fa-plus-circle"></i> Novo Patrimônio</button>
+            </a>
+        </div>
+    </div>
+
+
     </section>
 
     <h3 class="mt-3">Listagem de Patrimônios</h3>
-    <section>
+    <section class="card">
         <table class="table">
             <tr>
                 <th>ID</th>
@@ -79,3 +87,5 @@ foreach($patrimonios as $patrimonio){
     </section>
 
 </main>
+
+<script src="./app/js/listagem.js"></script>

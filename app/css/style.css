@@ -2,3 +2,26 @@
     text-align: center;
     margin-top: 15px;
 }
+
+.card{
+    padding: 20px;
+    background: #0054a612;
+    border-radius: 12px;
+}
+
+.button-menu{
+    width: 180px;
+}
+
+.btn-lista{
+    width: 100%;
+}
+
+.btn-pesquisa{
+    margin-top: 23px;
+}
+
+.grafico{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
