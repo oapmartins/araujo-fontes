@@ -2,6 +2,8 @@
 
 require __DIR__.'/vendor/autoload.php';
 
+define('TITLE', 'Cadastrar Patrimônio');
+
 use \App\Entity\Patrimonio;
 
 // Validação do POST
@@ -13,7 +15,8 @@ if(isset($_POST['dataPatrimonio'],$_POST['idFundo'],$_POST['valorPatrimonio'])){
    $objPatrimonio->fundo_id = $_POST['idFundo'];
    $objPatrimonio->cadastrar();
 
-//    var_dump($objPatrimonio);
+    header('location: index.php?status=success');
+    exit();
 }
 
 include __DIR__ .'/includes/header.php';
