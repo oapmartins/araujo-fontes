@@ -1,0 +1,8 @@
+{
+    "name": "app/araujo_fontes",
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    }
+}
