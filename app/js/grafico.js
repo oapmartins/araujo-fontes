@@ -50,9 +50,8 @@ function iniciaGrafico() {
     const day = 86400000
     const data7diasAtras = new Date(dataHoje - (7 * day));
 
-    console.log(consultaDadosGrafico());
-
-    const consultaDados = consultaDadosGrafico();
+    const consultaDados = consultaDadosGrafico(formataDataBanco(data7diasAtras.toLocaleDateString()), formataDataBanco(dataHoje.toLocaleDateString()));
+    
     if(consultaDados){
         $(".grafico-vazio").show();
         return false;
@@ -186,4 +185,14 @@ function consultaDadosGrafico(dataInicial = null, dataFinal = null) {
 function formataDataBR(data){
     const dataQuebrada = data.split('-');
     return dataQuebrada[2] + '/' + dataQuebrada[1] + '/' + dataQuebrada[0];
+}
+
+/**
+ * Função para formatar a data do padrão do BR para o BANCO.
+ * @param {Date} data 
+ * @returns 
+ */
+function formataDataBanco(data){
+    const dataQuebrada = data.split('/');
+    return dataQuebrada[2] + '-' + dataQuebrada[1] + '-' + dataQuebrada[0];
 }
