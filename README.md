@@ -11,8 +11,8 @@
 <h2>🛠️ Funcionalidades e Tecnologias Utilizadas</h2>
 
 - Gráfico para consulta de valores com filtro por Data Inicial e Final.
-- Listagem de Itens cadastrados na tabela
-- Telas de CRUD
+- Listagem de Itens cadastrados na tabela de Patrimônio.
+- Tela para CRUD.
   
 - Tecnologias Utilizadas
   -  MySql 
