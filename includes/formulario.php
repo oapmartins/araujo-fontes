@@ -7,7 +7,7 @@
     </section>
 
     <input type="hidden" id="data" value="<?= !empty($objPatrimonio) ? $objPatrimonio->date : '' ?>">
-    <input type="hidden" id="id_fundo" value="<?= !empty($objPatrimonio) ? $objPatrimonio->fundo_id : ''?>">
+    <input type="hidden" id="id_fundo" value="<?= !empty($objPatrimonio) ? $objPatrimonio->fundo_id : '0'?>">
     <input type="hidden" id="valor" value="<?= !empty($objPatrimonio) ? $objPatrimonio->value : ''?>">
 
     <h3 class="mt-3"><?= TITLE ?></h3>
@@ -21,7 +21,7 @@
             <div class="form-group col-md-3">
                 <label for="idFundo">Fundo</label>
                 <select id="idFundo" class="form-control" name="idFundo">
-                    <option value="0">Escolha o fundo...</option>
+                    <option value="0" selected>Escolha o fundo...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -41,3 +41,5 @@
         </div>
     </form>
 </main>
+
+<script src="./app/js/form.js"></script>

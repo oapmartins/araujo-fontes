@@ -9,6 +9,7 @@
     <h3 class="mt-3">Gráfico Fundos e Patrimônios</h3>
 
     <section class="mt-3">
+
         <div class="row">
             <div class="form-group col-md-3">
                 <label for="dataInicial">Data Inicial</label>
@@ -22,6 +23,12 @@
                 <button type="button" class="btn btn-primary btn-pesquisa" id="btnPesquisar"><i class="fas fa-search"></i> Buscar</button>
             </div>
 
+        </div>
+    </section>
+
+    <section class="grafico-vazio">
+    <div class="row">
+            <p>Não existem valores cadastrados nos Últimos 7 dias. Consulte outras datas!</p>
         </div>
     </section>
 

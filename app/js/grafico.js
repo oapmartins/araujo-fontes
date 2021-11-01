@@ -1,4 +1,3 @@
-
 let objGrafico = iniciaGrafico();
 
 $("#btnPesquisar").click(() => {
@@ -22,10 +21,23 @@ $("#btnPesquisar").click(() => {
     }
 
     // Aqui vou destruir o objeto do grafico, para adicionar o novo com os resultados.
-    objGrafico.destroy();
+    if(objGrafico != false){
+        objGrafico.destroy();
+    }
 
-    const dadosGrafico = consultaDadosGrafico(dataInicial.val(), dataFinal.val());
-    objGrafico = criaGrafico(formataDataBR(dataInicial.val()), formataDataBR(dataFinal.val()), dadosGrafico);
+    // Consultando os dados do Grafico
+    const dadosGrafico = consultaDadosGrafico(dataInicial.val(), dataFinal.val());;
+
+    if(dadosGrafico.length > 0){
+
+        $(".grafico-vazio").hide();
+        objGrafico = criaGrafico(formataDataBR(dataInicial.val()), formataDataBR(dataFinal.val()), dadosGrafico);
+    }
+    else{
+        $(".grafico-vazio").text('Não existem valores para os filtros selecionados. Consulte outras datas!').show();
+        return false;
+    }
+
 });
 
 
@@ -38,7 +50,16 @@ function iniciaGrafico() {
     const day = 86400000
     const data7diasAtras = new Date(dataHoje - (7 * day));
 
-    return criaGrafico(data7diasAtras.toLocaleDateString(), dataHoje.toLocaleDateString(), consultaDadosGrafico());
+    console.log(consultaDadosGrafico());
+
+    const consultaDados = consultaDadosGrafico();
+    if(consultaDados){
+        $(".grafico-vazio").show();
+        return false;
+    }else{
+        $(".grafico-vazio").hide();
+    }
+    return criaGrafico(data7diasAtras.toLocaleDateString(), dataHoje.toLocaleDateString(), consultaDados);
 }
 
 /**
