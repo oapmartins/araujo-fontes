@@ -12,6 +12,8 @@ if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
     exit;
 }
 
+$objPatrimonio = [];
+
 // Consulta o Patrimônio
 $objPatrimonio = Patrimonio::getPatrimonio($_GET['id']);
 
@@ -32,6 +34,7 @@ if(isset($_POST['dataPatrimonio'],$_POST['idFundo'],$_POST['valorPatrimonio'])){
     header('location: index.php?status=success');
     exit();
 }
+
 
 include __DIR__ .'/includes/header.php';
 include __DIR__ .'/includes/formulario.php';

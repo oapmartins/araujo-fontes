@@ -1,3 +1,10 @@
+$( document ).ready(function() {
+    console.log($("#data").val());
+    $("#dataPatrimonio").val($("#data").val().split(' ')[0]);
+    $("#idFundo").val($("#id_fundo").val());
+    $("#valorPatrimonio").val($("#valor").val());
+});
+
 $("#btnCadastrar").click(()=>{
     const campoDataPatrimonio   = $("#dataPatrimonio");
     const campoIdFundo          = $("#idFundo");

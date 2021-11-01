@@ -6,7 +6,11 @@
         </a>
     </section>
 
-    <h3 class="mt-3"><?=TITLE?></h3>
+    <input type="hidden" id="data" value="<?= !empty($objPatrimonio) ? $objPatrimonio->date : '' ?>">
+    <input type="hidden" id="id_fundo" value="<?= !empty($objPatrimonio) ? $objPatrimonio->fundo_id : ''?>">
+    <input type="hidden" id="valor" value="<?= !empty($objPatrimonio) ? $objPatrimonio->value : ''?>">
+
+    <h3 class="mt-3"><?= TITLE ?></h3>
     <form method="post" class="card" id="formCrud">
 
         <div class="row">
@@ -32,7 +36,7 @@
 
         <div class="row mt-3">
             <div class="form-group">
-                <button type="button" class="btn btn-success" id="btnCadastrar"><i class="fas fa-plus-circle"></i> <?=TITLEBTN?></button>
+                <button type="button" class="btn btn-success" id="btnCadastrar"><i class="fas fa-plus-circle"></i> <?= TITLEBTN ?></button>
             </div>
         </div>
     </form>

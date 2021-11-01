@@ -7,6 +7,8 @@ define('TITLEBTN', 'Cadastrar');
 
 use \App\Entity\Patrimonio;
 
+$objPatrimonio = [];
+
 // Validação do POST
 if(isset($_POST['dataPatrimonio'],$_POST['idFundo'],$_POST['valorPatrimonio'])){
    
