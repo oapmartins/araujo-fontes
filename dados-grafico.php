@@ -27,5 +27,6 @@ $retornoDadosGrafico = Patrimonio::getPatrimonios(
     'fundo_id, sum(value) as value',
     'fundo_id'
 );
+
 return print(json_encode($retornoDadosGrafico));
 ?>
